@@ -1,0 +1,372 @@
+html,
+body {
+  margin: 0;
+  padding: 0;  
+  font-family: 'Oswald', sans-serif;
+  font-size: 16px;
+}
+
+html {
+   box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {  
+  box-sizing: inherit;
+}
+
+p {  
+  padding: 0;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  height: 70px;  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 100px;
+  border-bottom: 2px solid #969696;
+}
+
+.sacola {
+  position: relative;
+}
+
+.sacola p {
+  color: #000;
+  display: none;
+  position: absolute;
+  justify-content: center;
+  box-align: center;
+  width: 20px;
+  height: 20px;
+  top: 15px;
+  border-radius: 10px;
+  background-color: #4fe0f9;
+}
+
+.menu {
+  width: 100%;
+  height: 100%;
+  padding: 30px 100px;
+}
+
+.menu .selecao {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.menu .selecao h2 {
+  font-size: 38px;
+}
+
+.menu .selecao div {
+  width: 30%;
+  float: right;
+  border: 1px solid #333;
+  width: 125px;
+  right: 30px;
+  overflow: hidden;
+  background: #fff;
+  margin-right: 90px;
+}
+
+.menu .selecao div select {
+  padding: 10px 8px;
+  width: 100%;
+  border: none;
+  box-shadow: none;
+  background: #fff;
+  appearance: none;
+  
+}
+
+.menu .selecao div select ::after {
+  background-color: #4fe0f9;
+}
+
+.menu .selecao div option {
+  width: 125px;
+  right: 30px;
+}
+
+.menu .selecao .selecionar {
+  display: none;
+}
+
+.container { 
+  display: flex;
+}
+
+.btn-options {
+  display: none;
+}
+
+.menu-filter {
+  display: inline-block;
+  min-width: 180px;
+}
+
+.menu-filter h3 {
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.btn-exit-filtro {
+  display: none;
+}
+
+.title-cor button {
+  display: none;
+}
+
+.title-tamanho button {
+  display: none;
+}
+
+.title-preco button {
+  display: none;
+}
+
+.fica {
+  display: block;
+}
+
+.escode {
+  display: none;
+}
+
+.tipo-cor {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  width: 100px;
+  cursor: pointer;
+  font-size: 14px;  
+  user-select: none;
+}
+
+.checkbox1 {
+  position: relative;
+  padding-top: 2px;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border: 1px solid #333;
+}
+
+input:checked ~ .checkmark {
+  background-color: #4fe0f9;
+}
+
+#ver-cores2{
+  display: none;
+  text-decoration: none;
+  color: #333;
+}
+
+#ver-cores{
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+
+.tamanho {
+  width: 180px;
+}
+
+.tipo-tamanho {
+  display: inline-block;
+  position: relative;
+  margin-bottom: 3px;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+input:checked ~ .checkboxbox {
+  border: 1px solid #4fe0f9;
+}
+
+.checkboxbox {
+  width: 30px;
+  right: 30px;
+  display: inline-block;
+  background: #fff;
+  font-size: 12px;
+  color: #333;
+  margin: 3px;
+  text-align: center;
+  line-height: 30px;
+  border: 1px solid #969696;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox2 {
+  display: none;
+}
+
+.tipo-preco {
+  display: block;
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 10px;
+  cursor: pointer;
+  font-size: 13px; 
+}
+
+.tipo-preco .checkbox1 {
+  position: relative;
+  padding-top: 2px;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.container .menu-filter .tipo-preco .checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 16px;
+  width: 16px;
+  background-color: #fff;
+  border: 1px solid #333;
+}
+
+.container .menu-filter .tipo-preco input:checked ~ .checkmark {
+  background-color: #4fe0f9;
+}
+
+.container .menu-filter .btn-opt-filtro {
+  display: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.container .menu-filter .btn-opt-filtro button {
+  background-color: #4fe0f9;
+  border: none;
+  color: #fff;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 48px;
+  margin-top: 50px;
+}
+
+.container .menu-filter .btn-opt-filtro .limpar {
+  background-color: #fff;
+  color: #969696;
+  border: solid 1px #969696;
+}
+
+.container .container-produtos {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.container-produtos .produtos {
+
+  display: flex;
+  box-orient: vertical;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  height: 100%;
+  margin: 20px 20px;
+}
+
+.container-produtos .produtos .nome {
+  font-size: 14px;
+  font-weight: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  padding-top: 15px;
+  padding-bottom: 5px;
+}
+
+.container-produtos .produtos .preco {
+  font-size: 16px;
+  font-weight: bolder;
+  text-transform: uppercase;
+  color: black;
+}
+
+.container-produtos .produtos h4 {
+  font-size: 12px;
+  font-weight: normal;
+  margin: 8px;
+}
+
+.container-produtos .produtos button {
+  background-color: black;
+  border: none;
+  color: #fff;
+  padding: 15px 58px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn-carregar {
+  display: flex;
+  justify-content: center;
+}
+
+.btn-carregar .button-mais {
+  background-color: #4fe0f9;
+  border: none;
+  color: #fff;
+  padding: 15px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 48px;
+  margin-top: 50px;
+}
+
+footer {
+  background-color: black;
+  font-family: sans-serif;
+  font-size: 12px;
+  text-align: center;
+  padding: 10px 0;
+  width: 100%;
+  height: 30px;
+  position: relative;
+  margin: 0 auto;
+  color: #fff;
+}
+
+
+
